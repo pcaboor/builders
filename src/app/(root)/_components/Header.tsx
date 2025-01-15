@@ -2,7 +2,7 @@ import { currentUser } from "@clerk/nextjs/server";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../convex/_generated/api";
 import Link from "next/link";
-import { Blocks, Code2, Sparkles } from "lucide-react";
+import { Code2, Container, Sparkles } from "lucide-react";
 import { SignedIn } from "@clerk/nextjs";
 import ThemeSelector from "./ThemeSelector";
 import LanguageSelector from "./LanguageSelector";
@@ -24,7 +24,7 @@ async function Header() {
         <div className="relative z-10">
             <div
                 className="flex items-center lg:justify-between justify-center 
-          bg-gradient-to-t from-black to-zinc-900  p-6 mb-4 rounded-lg"
+         bg-black  p-6 mb-4 rounded-lg"
             >
                 <div className="hidden lg:flex items-center gap-8">
                     <Link href="/" className="flex items-center gap-3 group relative">
@@ -36,16 +36,16 @@ async function Header() {
                             className="relative bg-gradient-to-br from-[#1a1a2e] to-[#0a0a0f] p-2 rounded-xl ring-1
               ring-white/10 group-hover:ring-white/20 transition-all"
                         >
-                            <Blocks className="size-6 text-white transform -rotate-6 group-hover:rotate-0 transition-transform duration-500" />
+                            <Container className="size-6 text-white transform -rotate-6 group-hover:rotate-0 transition-transform duration-500" />
                         </div>
 
                         <div className="flex flex-col">
                             <span className="block text-lg font-semibold text-white text-transparent bg-clip-text">
-                                CodeCraft
+                                Builders
                             </span>
-                            <span className="block text-xs text-whitefont-medium">
+                            {/* <span className="block text-xs text-whitefont-medium">
                                 Interactive Code Editor
-                            </span>
+                            </span> */}
                         </div>
                     </Link>
                     <nav className="flex items-center space-x-1">

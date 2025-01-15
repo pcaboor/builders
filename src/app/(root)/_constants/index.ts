@@ -338,6 +338,8 @@ print("Sum of numbers: \\(sum)")`,
 };
 
 export const THEMES: Theme[] = [
+    { id: "default", label: "Default", color: "#000" },
+    { id: "vercel", label: "Vercel", color: "#00cfb7" },
     { id: "vs-dark", label: "VS Dark", color: "#1e1e1e" },
     { id: "vs-light", label: "VS Light", color: "#ffffff" },
     { id: "github-dark", label: "GitHub Dark", color: "#0d1117" },
@@ -346,6 +348,77 @@ export const THEMES: Theme[] = [
 ];
 
 export const THEME_DEFINITONS = {
+    "default": {
+        base: "vs-dark",
+        inherit: true,
+        rules: [
+            {
+                token: "identifier",
+                foreground: "9CDCFE"
+            },
+            {
+                token: "identifier.function",
+                foreground: "DCDCAA"
+            },
+            {
+                token: "type",
+                foreground: "1AAFB0"
+            },
+        ],
+        colors: {
+            "editor.background": "#010101",
+            "editor.foreground": "#c9d1d9",
+            "editor.lineHighlightBackground": "#161b22",
+            "editorLineNumber.foreground": "#6e7681",
+            "editorIndentGuide.background": "#21262d",
+            "editor.selectionBackground": "#264f78",
+            "editor.inactiveSelectionBackground": "#264f7855",
+        },
+    },
+    "vercel": {
+        base: "vs-dark",
+        inherit: true,
+        rules: [
+            {
+                token: "keyword",
+                foreground: "ff565f" // Couleur pour les mots-clés (ex : if, else, return)
+            },
+            {
+                token: "identifier.function",
+                foreground: "47a8ff"
+            },
+            {
+                token: "string",
+                foreground: "CE9178" // Couleur pour les chaînes de caractères
+            },
+            {
+                token: "comment",
+                foreground: "6A9955", // Couleur pour les commentaires
+                fontStyle: "italic" // Style de police (bold, italic, underline)
+            },
+            {
+                token: "number",
+                foreground: "B5CEA8" // Couleur pour les nombres
+            },
+            {
+                token: "operator",
+                foreground: "D4D4D4" // Couleur pour les opérateurs (ex : +, -, *)
+            },
+            {
+                token: "delimiter",
+                foreground: "808080" // Couleur pour les délimiteurs (ex : {, }, ;)
+            }
+        ],
+        colors: {
+            "editor.background": "#010101",
+            "editor.foreground": "#c9d1d9",
+            "editor.lineHighlightBackground": "#161b22",
+            "editorLineNumber.foreground": "#6e7681",
+            "editorIndentGuide.background": "#21262d",
+            "editor.selectionBackground": "#264f78",
+            "editor.inactiveSelectionBackground": "#264f7855",
+        },
+    },
     "github-dark": {
         base: "vs-dark",
         inherit: true,
